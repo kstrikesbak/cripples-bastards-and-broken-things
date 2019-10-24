@@ -48,15 +48,10 @@ function changeToInitials(names) {
 
 function doubleOdd(numbers) {
   const doubled = [];
-
   for (let i = 0; i < numbers.length; i++) {
-    doubled.push(
-      numbers[i] % 2 === 1 && numbers[i] % 2 === 0
-        ? numbers[i] * 2
-        : numbers[i]
-      )
+    doubled.push((numbers[i] % 2 === 1 || numbers[i] % 2 === -1) ? numbers[i] * 2 : numbers[i]
+    )
   }
-
   return doubled;
 }
 
@@ -64,7 +59,7 @@ function upperCaseFirstLetters(names) {
   let uppercasedNames = [];
 
   for (let i = 0; i < names.length; i++) {
-    uppercasedNames.push(names[i][0].toLowerCase() + names[i].slice(1).toUpperCase())
+    uppercasedNames.push(names[i][0].toUpperCase() + names[i].slice(1).toLowerCase())
   }
 
   return uppercasedNames;
