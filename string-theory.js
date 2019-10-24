@@ -3,9 +3,9 @@ function crazyCase(str) {
 
   for (let i = 0; i < str.length; i++) {
     if (i % 2 === 0) {
-      crazyCased = str[i].toLowerCase()
+      crazyCased = crazyCased + str[i].toLowerCase()
     } else {
-      crazyCased = str[i].toUpperCase()
+      crazyCased = crazyCased + str[i].toUpperCase()
     }
   }
 
