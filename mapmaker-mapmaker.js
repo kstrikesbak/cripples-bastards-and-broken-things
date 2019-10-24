@@ -1,10 +1,8 @@
 function doubleAll(numbers) {
-  let doubled = '';
-  
+  let doubled = [];
   for (let i = 0; i < numbers.length; i++) {
-    doubled = doubled + (numbers[i] * 2);
+    doubled.push(numbers[i] * 2);
   }
-  
   return doubled;
 }
 
@@ -13,7 +11,7 @@ function absoluteValues(numbers) {
 
   for (let i = 0; i < numbers.length; i++) {
     const number = numbers[i];
-    const absolute = number < 0 ? number * -1 : number;
+    absolutes.push(number < 0 ? number * -1 : number);
   }
 
   return absolutes;
@@ -23,29 +21,29 @@ function yelledGreetings(greetings) {
   const yelled = [];
 
   for (let i = 0; i < greetings.length; i++) {
-    yelled.push(`${greetings[i]} !`)
+    yelled.push(`${greetings[i]}!`)
   }
 
   return yelled;
 }
 
 function changeToInitials(names) {
-  const initialsList = [];
+  const newArr = [];
 
   for (let i = 0; i < names.length; i++) {
     const name = names[i];
-    let initials = '';
+    let newStr = '';
 
     for (let i = 0; i < name.length; i++) {
       if (i === 0 || name[i - 1] === ' ') {
-        initials = name[i];
+        newStr = newStr + name[i];
       }
     }
 
-    initialsList.push(initials);
+    newArr.push(newStr);
   }
 
-  return initialsList;
+  return newArr;
 }
 
 function doubleOdd(numbers) {
