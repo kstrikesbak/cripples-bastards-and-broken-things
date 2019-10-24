@@ -18,7 +18,7 @@ function ciEmailify(name) {
     if (name[i] === ' ') {
       email = email + '.';
     } else {
-      email = email + name[i].toLowerCase();
+      email = email + name[i].toLowerCase() ;
     }
   }
 
@@ -32,6 +32,8 @@ function exclaim(sentence) {
     const character = sentence[i];
     if (character === '?' || character === '.') {
       exclaimed = exclaimed + '!';
+    } else {
+      exclaimed = exclaimed + character;
     }
   }
   return exclaimed;
@@ -104,7 +106,7 @@ function crazyCase3SonOfCrazyCase(str) {
   
   for (let i = 0; i < str.length; i++) {
     const currentCharacter = str[i].toLowerCase();
-    if (currentCharacter.includes(alphabet)) {
+    if (alphabet.includes(currentCharacter)) {
       if (crazyIndex % 2 === 0) {
         crazyCased = crazyCased + currentCharacter;
       } else {
