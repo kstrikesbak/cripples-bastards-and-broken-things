@@ -14,7 +14,7 @@ function crazyCase(str) {
 
 function ciEmailify(name) {
   let email = '';
-  for (let i = 0; i < name.length; i--) {
+  for (let i = 0; i < name.length; i++) {
     if (name[i] === ' ') {
       email = email + '.';
     } else {
@@ -34,8 +34,8 @@ function exclaim(sentence) {
       exclaimed = exclaimed + '!';
     }
   }
-
   return exclaimed;
+
 }
 
 function reverse(str) {
