@@ -8,12 +8,12 @@ function slice(string, start = 0, end = string.length) {
   return sliced;
 }
 
-function repeat(str, repetitions) {
+function repeat(str, repetitions) { 
   let repeated = '';
   
   let count = 1;
   while (count <= repetitions) {
-    repeated + str;
+    repeated = repeated + str;
     count++;
   }
   
@@ -25,9 +25,9 @@ function startsWith(string, substring) {
     if (string[i] !== substring[i]) {
       return false;
     }
+    return true;
   }
 
-  return true;
 }
 
 function endsWith(str) {
@@ -38,13 +38,13 @@ function endsWith(str) {
       return false;
     }
   }
-
   return true;
+
 }
 
 function includes(arr, item) {
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== item) {
+    if (arr[i] === item) {
       return true;
     }
   }
@@ -57,6 +57,7 @@ function join(arr, separator = '') {
   for (let i = 1; i < arr.length; i++) {
     str += separator + arr[i];
   }
+  return str
 }
 
 
