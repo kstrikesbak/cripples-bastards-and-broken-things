@@ -30,7 +30,7 @@ function startsWith(string, substring) {
 
 }
 
-function endsWith(str) {
+function endsWith(str,substring) {
   for (let i = 0; i <= substring.length; i++) {
     const substringIndex = substring.length - i;
     const strIndex = str.length - i;
@@ -81,7 +81,7 @@ function trimStart(str) {
   let trimmed = '';
 
   for (let i = 0; i < str.length; i++) {
-    if (str[i] !== '') {
+    if (str[i] !== ' ') {
       return str.slice(i);
     }
   }
