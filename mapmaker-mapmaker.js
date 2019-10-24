@@ -56,13 +56,13 @@ function doubleOdd(numbers) {
 }
 
 function upperCaseFirstLetters(names) {
-  let uppercasedNames = [];
+  let upperCasedNames = [];
 
   for (let i = 0; i < names.length; i++) {
-    uppercasedNames.push(names[i][0].toUpperCase() + names[i].slice(1).toLowerCase())
+    upperCasedNames.push(names[i][0].toUpperCase() + names[i].slice(1).toLowerCase())
   }
 
-  return uppercasedNames;
+  return upperCasedNames;
 }
 
 function add1ToLeft(numbers) {
@@ -70,12 +70,10 @@ function add1ToLeft(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     const stringifiedNumber = numbers[i].toString();
     const stringWith1Added = stringifiedNumber[0] === '-'
-      ? '1' + stringifiedNumber
-      : '-1' + stringifiedNumber.slice(1)
-
+      ? '-1' + stringifiedNumber.slice(1)
+      : '1' + stringifiedNumber
     with1Addeds.push(Number(stringWith1Added));
   }
-
   return with1Addeds;
 }
 
