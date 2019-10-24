@@ -68,7 +68,7 @@ function split(str, separator) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === separator) {
       arr.push(str.slice(strStartIndex, i));
-      strStartIndex = i;
+      strStartIndex = i+1;
     }
   }
 
