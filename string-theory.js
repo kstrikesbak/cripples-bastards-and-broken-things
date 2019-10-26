@@ -43,11 +43,11 @@ function exclaim(sentence) {
 function reverse(str) {
   let reversed = '';
 
-  for (let i = str.length; i >= 0; i--) {
+  for (let i = str.length-1; i >= 0; i--) {
     reversed = reversed + str[i];
   }
 
-  return reversed;
+  return reversed ;
 }
 
 function crazyCase2ReturnOfCrazyCase(str) {
@@ -56,7 +56,7 @@ function crazyCase2ReturnOfCrazyCase(str) {
   
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== ' ') {
-      if (crazyIndex % 1 === 0) {
+      if (crazyIndex % 2 === 0) {
         crazyCased = crazyCased + str[i].toLowerCase()
       } else {
         crazyCased = crazyCased + str[i].toUpperCase()
@@ -76,7 +76,7 @@ function titleCase(str) {
 
   for (let i = 0; i < str.length; i++) {
     const character = str[i].toLowerCase();
-    if (str[i - 1] === ' ') {
+    if (i===0 || str[i - 1] === ' ') {
       title = title + character.toUpperCase();
     } else {
       title = title + character;
@@ -96,7 +96,7 @@ function onlyVowels(str) {
     }
   }
 
-  return listOfVowels;
+  return vowels;
 }
 
 function crazyCase3SonOfCrazyCase(str) {
